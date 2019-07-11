@@ -19,32 +19,60 @@ class _LoginPage extends State<LoginPage> {
 
     return Scaffold(
       appBar: AppBar(title: Text("Login/SingUp Page"),),
-      body:Container(
-        child:Column(
-          children: <Widget>[
-            TextField(),
-            TextField(),
+      body:Container( child:Container(
+        height: MediaQuery.of(context).size.height,
+        padding: EdgeInsets.all(36),
+          child:Column(
+            mainAxisSize: MainAxisSize.max,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              TextField(
+                decoration: new InputDecoration(
+                  border: OutlineInputBorder(
+                    borderRadius: new BorderRadius.circular(30.0),
+                  ),
+                    hintText: 'User name',
 
-            RaisedButton(
-             child: new Text('Sign in'),
-              onPressed: () {},
-              shape:  new RoundedRectangleBorder(borderRadius: new BorderRadius.circular(30.0)) ,
+                ),
+              ),
+              SizedBox(
+                height: 20.0,
+              ),
+              TextField(
+                keyboardType: TextInputType.text,
+                obscureText: true,
+                decoration: new InputDecoration(
+                    border: OutlineInputBorder(
+                      borderRadius: new BorderRadius.circular(30.0),
+                    ),
+                    hintText: 'Password'
+                ),
+              ),
+              SizedBox(
+                height: 20.0,
+              ),
+              RaisedButton(
+                child: new Text('Sign in'),
+                onPressed: () {},
+                shape:  new RoundedRectangleBorder(borderRadius: new BorderRadius.circular(30.0)) ,
 
-            ),
-            RaisedButton(
-              child: new Text('facebook'),
-              onPressed: () {},
-              shape:  new RoundedRectangleBorder(borderRadius: new BorderRadius.circular(30.0)) ,
+              ),
+              RaisedButton(
+                child: new Text('facebook'),
+                onPressed: () {},
+                shape:  new RoundedRectangleBorder(borderRadius: new BorderRadius.circular(30.0)) ,
 
-            ),
-            RaisedButton(
-              child: new Text('google'),
-              onPressed: () {},
-              shape:  new RoundedRectangleBorder(borderRadius: new BorderRadius.circular(30.0)) ,
+              ),
+              RaisedButton(
+                child: new Text('google'),
+                onPressed: () {},
+                shape:  new RoundedRectangleBorder(borderRadius: new BorderRadius.circular(30.0)) ,
 
-            ),
-          ],
-        )
+              ),
+            ],
+          )
+      )
+
       )
     );
   }
