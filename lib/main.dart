@@ -18,25 +18,20 @@ class _LoginPage extends State<LoginPage> {
         body: new Stack(
       children: <Widget>[
         Container(
-          decoration: BoxDecoration( gradient: new LinearGradient(
-        colors: [
-                Color.fromRGBO(169, 187, 70, 1.0),
-              Color.fromRGBO(95, 187, 70, 1.0)],
-            begin: const FractionalOffset(0.7,0.0),
-            end: const FractionalOffset(0.0, 0.3),
-            stops: [0.0, 1.0],
-
-
-        ),
-
+          decoration: BoxDecoration(
+              gradient: new LinearGradient(
+                colors: [
+                  Color.fromRGBO(169, 187, 70, 1.0),
+                  Color.fromRGBO(95, 187, 70, 1.0)
+                ],
+                begin: const FractionalOffset(0.5, 0.0),
+                end: const FractionalOffset(0.5, 1),
+                stops: [0.0, 1.0],
+              ),
               image: DecorationImage(
-            image: AssetImage('assets/golf_gears_bg.png'),
-            fit: BoxFit.cover,
-
-
-          )
-          )
-          ,
+                image: AssetImage('assets/golf_gears_bg.png'),
+                fit: BoxFit.cover,
+              )),
         ),
         new Container(
             height: MediaQuery.of(context).size.height,
@@ -52,10 +47,8 @@ class _LoginPage extends State<LoginPage> {
                 ),
                 TextField(
                   decoration: new InputDecoration(
-                    labelStyle: new TextStyle(color:Colors.white),
-
+                    labelStyle: new TextStyle(color: Colors.white),
                     border: OutlineInputBorder(
-
                       borderRadius: new BorderRadius.circular(30.0),
                     ),
                     hintText: 'User name',
@@ -68,7 +61,6 @@ class _LoginPage extends State<LoginPage> {
                   keyboardType: TextInputType.text,
                   obscureText: true,
                   decoration: new InputDecoration(
-
                       border: OutlineInputBorder(
                         borderRadius: new BorderRadius.circular(30.0),
                       ),
@@ -77,8 +69,10 @@ class _LoginPage extends State<LoginPage> {
                 SizedBox(
                   height: 10.0,
                 ),
-                SizedBox(height: 20.0,  child: Text("Fogot Password?",style: new TextStyle(color: Colors.white))),
-
+                SizedBox(
+                    height: 20.0,
+                    child: Text("Fogot Password?",
+                        style: new TextStyle(color: Colors.white))),
                 RaisedButton(
                   padding: EdgeInsets.all(16),
                   textColor: Colors.white,
@@ -93,30 +87,25 @@ class _LoginPage extends State<LoginPage> {
                   height: 10.0,
                 ),
                 RaisedButton(
-                  padding: EdgeInsets.all(16),
+                    padding: EdgeInsets.all(16),
                     textColor: Colors.white,
-                  child: new Text('Connect with Facebook',
-                      style: new TextStyle(fontSize: 20.0)),
-                  onPressed: () {},
-                  shape: new RoundedRectangleBorder(
-                      borderRadius: new BorderRadius.circular(30.0)),
-                    color: Color.fromRGBO(38, 114, 203, 1.0)
-                ),
+                    child: new Text('Connect with Facebook',
+                        style: new TextStyle(fontSize: 20.0)),
+                    onPressed: () {},
+                    shape: new RoundedRectangleBorder(
+                        borderRadius: new BorderRadius.circular(30.0)),
+                    color: Color.fromRGBO(38, 114, 203, 1.0)),
                 SizedBox(
                   height: 10.0,
                 ),
                 RaisedButton(
                     padding: EdgeInsets.all(16),
-
-                  child: new Text('google',
-                      style: new TextStyle(fontSize: 20.0)
-                  ),
-
-                  onPressed: () {},
-                  shape: new RoundedRectangleBorder(
-                      borderRadius: new BorderRadius.circular(30.0)),
-                    color: Color.fromRGBO(255, 255, 255, 1.0)
-                ),
+                    child: new Text('google',
+                        style: new TextStyle(fontSize: 20.0)),
+                    onPressed: () {},
+                    shape: new RoundedRectangleBorder(
+                        borderRadius: new BorderRadius.circular(30.0)),
+                    color: Color.fromRGBO(255, 255, 255, 1.0)),
               ],
             ))
       ],
