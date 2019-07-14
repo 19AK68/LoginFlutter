@@ -16,8 +16,8 @@ class _LoginPage extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: new Stack(
-      children: <Widget>[
-        Container(
+        children: <Widget>[
+          Container(
           decoration: BoxDecoration(
               gradient: new LinearGradient(
                 colors: [
@@ -34,8 +34,8 @@ class _LoginPage extends State<LoginPage> {
               )),
         ),
         new Container(
-            height: MediaQuery.of(context).size.height,
-            padding: EdgeInsets.all(36),
+              height: MediaQuery.of(context).size.height,
+              padding: EdgeInsets.all(36),
             child: Column(
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.center,
@@ -45,15 +45,15 @@ class _LoginPage extends State<LoginPage> {
                 SizedBox(
                   height: 20,
                 ),
-                TextField(
-                  decoration: new InputDecoration(
-                    labelStyle: new TextStyle(color: Colors.white),
-                    border: OutlineInputBorder(
-                      borderRadius: new BorderRadius.circular(30.0),
+                  TextField(
+                    decoration: new InputDecoration(
+                      labelStyle: new TextStyle(color: Colors.white),
+                      border: OutlineInputBorder(
+                        borderRadius: new BorderRadius.circular(30.0),
+                      ),
+                      hintText: 'User name',
                     ),
-                    hintText: 'User name',
                   ),
-                ),
                 SizedBox(
                   height: 20.0,
                 ),
@@ -107,7 +107,8 @@ class _LoginPage extends State<LoginPage> {
                         borderRadius: new BorderRadius.circular(30.0)),
                     color: Color.fromRGBO(255, 255, 255, 1.0)),
               ],
-            ))
+            )
+        )
       ],
     ));
   }
