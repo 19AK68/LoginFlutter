@@ -41,7 +41,7 @@ class _LoginPage extends State<LoginPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
-                Container(),
+                Container(child: Image.asset('assets/logo.png',fit: BoxFit.cover,height: 80.0,)),
                 SizedBox(
                   height: 20,
                 ),
@@ -84,7 +84,7 @@ class _LoginPage extends State<LoginPage> {
                   color: Color.fromRGBO(255, 118, 45, 1.0),
                 ),
                 SizedBox(
-                  height: 10.0,
+                  height: 30.0,
                 ),
                 RaisedButton(
                     padding: EdgeInsets.all(16),
@@ -100,12 +100,27 @@ class _LoginPage extends State<LoginPage> {
                 ),
                 RaisedButton(
                     padding: EdgeInsets.all(16),
-                    child: new Text('google',
+                    child: new Text('Connect with google',
                         style: new TextStyle(fontSize: 20.0)),
                     onPressed: () {},
                     shape: new RoundedRectangleBorder(
                         borderRadius: new BorderRadius.circular(30.0)),
                     color: Color.fromRGBO(255, 255, 255, 1.0)),
+                Center( child:Container(
+                  height: 80.0,
+                        child: Align(
+                        alignment: Alignment.bottomCenter,
+                          child: Text("Don't have an account? Sign Up",
+                              style: new TextStyle(color: Colors.white,fontSize: 20.0)),
+
+                        ),
+
+
+                       )
+
+
+
+              ),
               ],
             )
         )
